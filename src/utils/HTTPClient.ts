@@ -297,6 +297,17 @@ export default class HTTPClient {
         ctx.client.clientName = Constants.CLIENTS.TV.NAME;
         ctx.client.userAgent = Constants.CLIENTS.TV.USER_AGENT;
         break;
+      case 'TV_SAMSUNG':
+        ctx.client.deviceMake = Constants.CLIENTS.TV_SAMSUNG.DEVICE_MAKE;
+        ctx.client.deviceModel = Constants.CLIENTS.TV_SAMSUNG.DEVICE_MODEL;
+        ctx.client.clientVersion = Constants.CLIENTS.TV_SAMSUNG.VERSION;
+        ctx.client.clientName = Constants.CLIENTS.TV_SAMSUNG.NAME;
+        ctx.client.osName = Constants.CLIENTS.TV_SAMSUNG.OS_NAME;
+        ctx.client.osVersion = Constants.CLIENTS.TV_SAMSUNG.OS_VERSION;
+        ctx.client.userAgent = Constants.CLIENTS.TV_SAMSUNG.USER_AGENT;
+        delete ctx.client.browserName;
+        delete ctx.client.browserVersion;
+        break;
       case 'TV_SIMPLY':
         ctx.client.clientVersion = Constants.CLIENTS.TV_SIMPLY.VERSION;
         ctx.client.clientName = Constants.CLIENTS.TV_SIMPLY.NAME;
